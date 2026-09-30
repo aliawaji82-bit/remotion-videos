@@ -3,11 +3,13 @@ import { AbsoluteFill, Series, staticFile, useVideoConfig } from "remotion";
 import { AiShot } from "./AiShot";
 import { brand } from "./brand";
 import { Caption } from "./Caption";
+import { GlobeNetwork } from "./GlobeNetwork";
 
 // Big Chains B2B promo, 55s @ 30fps.
-// Scenes 1, 2, 3 and 8 are Flow-generated b-roll (placeholders until delivered)
-// with captions added here. Scenes 4-7 and 9 are the finished brand and
-// screen-recording clips from the video kit, which already carry their text.
+// Scenes 1, 2 and 8 are Flow-generated b-roll (placeholders until delivered)
+// and scene 3 is the coded globe; all four get their captions here.
+// Scenes 4-7 and 9 are the finished brand and screen-recording clips from
+// the video kit, which already carry their text.
 export const BigChainsPromo: React.FC = () => {
   const { fps } = useVideoConfig();
 
@@ -37,7 +39,7 @@ export const BigChainsPromo: React.FC = () => {
           />
         </Series.Sequence>
         <Series.Sequence name="3 Transition: connected network" durationInFrames={150} premountFor={fps}>
-          <AiShot name="AI shot" file="" label="Scene 3: Connected network" premountFor={fps} />
+          <GlobeNetwork name="Globe network" accentColor={brand.cyan} premountFor={fps} />
           <Caption
             name="Caption"
             from={15}
