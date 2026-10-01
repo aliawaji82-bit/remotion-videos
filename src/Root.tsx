@@ -4,6 +4,12 @@ import { AiShot } from "./BigChains/AiShot";
 import { BigChainsPromo } from "./BigChains/BigChainsPromo";
 import { Caption } from "./BigChains/Caption";
 import { GlobeNetwork } from "./BigChains/GlobeNetwork";
+import {
+  CraneLift,
+  FragmentedSystems,
+  PortAerial,
+  VesselAtSea,
+} from "./BigChains/MotionScenes";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -63,6 +69,20 @@ export const RemotionRoot: React.FC = () => {
           fps={30}
           width={1920}
           height={1080}
+          defaultProps={{
+            broll: "clips",
+          }}
+        />
+        <Composition
+          id="BigChainsPromoMotion"
+          component={BigChainsPromo}
+          durationInFrames={1650}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            broll: "motion",
+          }}
         />
         <Composition
           id="BigChainsCaption"
@@ -80,6 +100,50 @@ export const RemotionRoot: React.FC = () => {
         <Composition
           id="BigChainsGlobe"
           component={GlobeNetwork}
+          durationInFrames={150}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            accentColor: "#00C2D7",
+          }}
+        />
+        <Composition
+          id="BigChainsVesselAtSea"
+          component={VesselAtSea}
+          durationInFrames={120}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            accentColor: "#00C2D7",
+          }}
+        />
+        <Composition
+          id="BigChainsFragmentedSystems"
+          component={FragmentedSystems}
+          durationInFrames={120}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            accentColor: "#00C2D7",
+          }}
+        />
+        <Composition
+          id="BigChainsPortAerial"
+          component={PortAerial}
+          durationInFrames={150}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            accentColor: "#00C2D7",
+          }}
+        />
+        <Composition
+          id="BigChainsCraneLift"
+          component={CraneLift}
           durationInFrames={150}
           fps={30}
           width={1920}
