@@ -7,7 +7,7 @@ import { GlobeNetwork } from "./GlobeNetwork";
 import { CraneLift, FragmentedSystems, PortAerial, VesselAtSea } from "./MotionScenes";
 
 // Big Chains B2B promo, 55s @ 30fps.
-// Scenes 1, 2 and 8 are AI-generated b-roll (8A still pending)
+// Scenes 1, 2 and 8 are AI-generated b-roll
 // and scene 3 is the coded globe; all four get their captions here.
 // Scenes 4-7 and 9 are the finished brand and screen-recording clips from
 // the video kit, which already carry their text.
@@ -100,7 +100,7 @@ export const BigChainsPromo: React.FC<BigChainsPromoProps> = ({ broll }) => {
             </>
           ) : (
             <>
-              <AiShot name="AI shot 8A" file="" label="Scene 8A: Port aerial" durationInFrames={150} premountFor={fps} />
+              <AiShot name="AI shot 8A" file="bigchains/scene08a_port.mp4" label="Scene 8A: Port aerial" trimBefore={8} durationInFrames={150} premountFor={fps} />
               <AiShot name="AI shot 8B" file="bigchains/scene08b_crane.mp4" label="Scene 8B: Crane lift" from={150} trimBefore={90} durationInFrames={150} premountFor={fps} />
             </>
           )}
